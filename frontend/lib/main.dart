@@ -160,7 +160,7 @@ class SelectionMenuWidget extends StatelessWidget {
                           source: ImageSource.camera,
                           maxHeight: 360,
                           maxWidth: 360,
-                          imageQuality: 100);
+                          imageQuality: 50);
                       if (image != null) {
                         await Navigator.of(context).push(
                           MaterialPageRoute(

@@ -52,8 +52,8 @@ def image_classify():
         print(result)
         os.remove(filePath)
 
-        # if 100 * np.max(score) > 98:
-        return result
+        if 100 * np.max(score) > 70:
+            return result
 
     return "Cannot be identified!"
 
