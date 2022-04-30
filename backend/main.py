@@ -52,26 +52,26 @@ def image_classify():
         print(result)
         os.remove(filePath)
 
-        if 100 * np.max(score) > 98:
-            return result
+        # if 100 * np.max(score) > 98:
+        return result
 
     return "Cannot be identified!"
 
 
-@app.route('/Submit', method='POST')
-def train_model():
-    model = tf.keras.models.load_model(MODEL_DIR)
-    file = request.files['file']
+# @app.route('/Submit', method='POST')
+# def train_model():
+#     model = tf.keras.models.load_model(MODEL_DIR)
+#     file = request.files['file']
 
-    if file and allowed_file(file.filename):
-        input_class = request.args.get('class_name')
-        filename = secure_filename(file.filename)
-        filePath = pathlib.Path(TRAIN_DIR, input_class)
-        path.mkdir(parents=True)
+#     if file and allowed_file(file.filename):
+#         input_class = request.args.get('class_name')
+#         filename = secure_filename(file.filename)
+#         filePath = pathlib.Path(TRAIN_DIR, input_class)
+#         path.mkdir(parents=True)
 
-        file.save(pathlib.Path(filePath, filename))
+#         file.save(pathlib.Path(filePath, filename))
 
-        train_dir = pathlib.Path(TRAIN_DIR)
-        val_dir = pathlib.Path(VAL_DIR)
+#         train_dir = pathlib.Path(TRAIN_DIR)
+#         val_dir = pathlib.Path(VAL_DIR)
 
-        return 'THANKS'
+#         return 'THANKS'
