@@ -1,5 +1,5 @@
 #!/bin/bash
-app="ketsu_server"
+app="katsu_server"
 docker build -t ${app} .
 docker run -d -p 56733:80 \
   --name=${app} \

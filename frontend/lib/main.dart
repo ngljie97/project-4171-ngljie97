@@ -16,14 +16,14 @@ Future<void> main() async {
   runApp(
     MaterialApp(
       theme: ThemeData.dark(),
-      home: const KetsuHome(),
+      home: const KatsuHome(),
     ),
   );
 }
 
 // A screen that allows users to take a picture using a given camera.
-class KetsuHome extends StatefulWidget {
-  const KetsuHome({
+class KatsuHome extends StatefulWidget {
+  const KatsuHome({
     Key? key,
   }) : super(key: key);
 
@@ -31,7 +31,7 @@ class KetsuHome extends StatefulWidget {
   HomeScreenState createState() => HomeScreenState();
 }
 
-class HomeScreenState extends State<KetsuHome> {
+class HomeScreenState extends State<KatsuHome> {
   late Future<String> _serverUp;
 
   @override
@@ -54,7 +54,7 @@ class HomeScreenState extends State<KetsuHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('KETSU - Select file')),
+      appBar: AppBar(title: const Text('Katsu - Select file')),
       // You must wait until the controller is initialized before displaying the
       // camera preview. Use a FutureBuilder to display a loading spinner until the
       // controller has finished initializing.
@@ -261,7 +261,7 @@ class ProcessPictureState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('KETSU - Result')),
+      appBar: AppBar(title: const Text('Katsu - Result')),
       // The image is stored as a file on the device. Use the `Image.file`
       // constructor with the given path to display the image.
       body: FutureBuilder<String>(
