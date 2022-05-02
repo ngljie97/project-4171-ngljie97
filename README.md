@@ -1,4 +1,5 @@
-# project-ketsu
+# CZ4171 - Course Project
+## Offloading AI inference from IoT device to the cloud.
 
 ## Flutter Android application
 The Android application is developed using the Flutter Android framework. It can be used to take photo or select a photo to upload to the server for the image recognition.
@@ -11,3 +12,5 @@ The backend server is coded using Python, together with Flask and RESTful API, t
 
 ### Setting up
 Run the start.sh found in the `backend` directory
+
+By Ng Li Jie
